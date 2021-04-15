@@ -42,13 +42,6 @@ history = model.fit(train_dataset, validation_data=validation_dataset, epochs=5,
 scores = model.evaluate(test_dataset, verbose=1) #точность предсказаний
 print("Доля верных ответов в процентах: ", scores[1]*100)
 
-plt.plot(history.history['accuracy'], label='Доля верных ответов на обучающем наборе')
-plt.plot(history.history['val_accuracy'], label='Доля верных ответов на проверочном наборе')
-plt.xlabel('Эпоха обучения')
-plt.ylabel('Доля верных ответов')
-plt.legend()
-plt.show()
-
 plt.plot(history.history['loss'], label='Ошибка на обучающем наборе')
 plt.plot(history.history['val_loss'], label='Ошибка на проверочном наборе')
 plt.xlabel('Эпоха обучения')
